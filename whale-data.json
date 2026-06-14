@@ -1,0 +1,29 @@
+[
+  {
+    "time": "14. 6. 2026 09:15",
+    "btc": 1245,
+    "usd": "79.8M",
+    "price": "64100",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "13. 6. 2026 18:55",
+    "btc": 673,
+    "usd": "43.2M",
+    "price": "64200",
+    "from": "unknown",
+    "to": "Binance",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "12. 6. 2026 15:27",
+    "btc": 787,
+    "usd": "50.54M",
+    "price": "64215",
+    "from": "unknown",
+    "to": "Robinhood",
+    "interp": "Potenciální prodej"
+  }
+]
