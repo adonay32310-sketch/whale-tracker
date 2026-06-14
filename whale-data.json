@@ -9,6 +9,15 @@
     "interp": "Potenciální nákup"
   },
   {
+    "time": "14. 6. 2026 07:42",
+    "btc": 682,
+    "usd": "43.7M",
+    "price": "64100",
+    "from": "unknown",
+    "to": "Binance",
+    "interp": "Potenciální prodej"
+  },
+  {
     "time": "13. 6. 2026 18:55",
     "btc": 673,
     "usd": "43.2M",
@@ -18,6 +27,15 @@
     "interp": "Potenciální prodej"
   },
   {
+    "time": "13. 6. 2026 14:20",
+    "btc": 1540,
+    "usd": "98.7M",
+    "price": "64100",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
     "time": "12. 6. 2026 15:27",
     "btc": 787,
     "usd": "50.54M",
@@ -25,5 +43,185 @@
     "from": "unknown",
     "to": "Robinhood",
     "interp": "Potenciální prodej"
+  },
+  {
+    "time": "12. 6. 2026 14:40",
+    "btc": 1190,
+    "usd": "75.84M",
+    "price": "63731",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "12. 6. 2026 14:13",
+    "btc": 1159,
+    "usd": "73.53M",
+    "price": "63443",
+    "from": "unknown",
+    "to": "Coinbase Inst.",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "12. 6. 2026 04:19",
+    "btc": 819,
+    "usd": "52.08M",
+    "price": "63590",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "12. 6. 2026 04:00",
+    "btc": 974,
+    "usd": "61.88M",
+    "price": "63532",
+    "from": "unknown",
+    "to": "Coinbase Inst.",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "11. 6. 2026 18:01",
+    "btc": 1364,
+    "usd": "86.71M",
+    "price": "63570",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "11. 6. 2026 17:59",
+    "btc": 881,
+    "usd": "55.88M",
+    "price": "63430",
+    "from": "unknown",
+    "to": "Coinbase Inst.",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "11. 6. 2026 17:42",
+    "btc": 2264,
+    "usd": "143.14M",
+    "price": "63225",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "10. 6. 2026 11:30",
+    "btc": 945,
+    "usd": "60.1M",
+    "price": "63600",
+    "from": "unknown",
+    "to": "Robinhood",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "09. 6. 2026 16:45",
+    "btc": 712,
+    "usd": "45.9M",
+    "price": "64500",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "08. 6. 2026 10:03",
+    "btc": 1550,
+    "usd": "98.5M",
+    "price": "63500",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "07. 6. 2026 19:20",
+    "btc": 623,
+    "usd": "40.1M",
+    "price": "64400",
+    "from": "unknown",
+    "to": "Binance",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "06. 6. 2026 08:15",
+    "btc": 1087,
+    "usd": "69.2M",
+    "price": "63650",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "05. 6. 2026 14:50",
+    "btc": 834,
+    "usd": "54.3M",
+    "price": "65100",
+    "from": "unknown",
+    "to": "Coinbase Inst.",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "04. 6. 2026 09:40",
+    "btc": 967,
+    "usd": "62.8M",
+    "price": "64900",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "03. 6. 2026 22:10",
+    "btc": 1450,
+    "usd": "96.1M",
+    "price": "66250",
+    "from": "unknown",
+    "to": "Binance",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "03. 6. 2026 08:51",
+    "btc": 793,
+    "usd": "52.6M",
+    "price": "66300",
+    "from": "unknown",
+    "to": "Robinhood",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "02. 6. 2026 17:35",
+    "btc": 521,
+    "usd": "34.2M",
+    "price": "65700",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "01. 6. 2026 12:20",
+    "btc": 1780,
+    "usd": "115.7M",
+    "price": "65000",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
+  },
+  {
+    "time": "01. 6. 2026 10:05",
+    "btc": 650,
+    "usd": "42.1M",
+    "price": "64800",
+    "from": "unknown",
+    "to": "Binance",
+    "interp": "Potenciální prodej"
+  },
+  {
+    "time": "31. 5. 2026 23:10",
+    "btc": 920,
+    "usd": "59.8M",
+    "price": "65000",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
   }
 ]
