@@ -1,1 +1,3 @@
-
+# Otevři Command Prompt v místě, kam chceš repozitář
+git clone https://github.com/TauricResearch/TradingAgents.git
+cd TradingAgents
