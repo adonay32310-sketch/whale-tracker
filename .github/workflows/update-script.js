@@ -5,13 +5,10 @@ console.log('=== Whale Data Update Started ===');
 let data = [];
 try {
   data = JSON.parse(fs.readFileSync('whale-data.json', 'utf8'));
-  console.log(`Načteno ${data.length} záznamů`);
 } catch (e) {
-  console.log('Soubor nenalezen nebo poškozen, vytvářím nový.');
   data = [];
 }
 
-// Přidáme jeden záznam
 data.push({
   "time": new Date().toLocaleDateString('cs-CZ') + " " + new Date().toLocaleTimeString('cs-CZ', {hour: '2-digit', minute: '2-digit'}),
   "btc": 650,
@@ -23,6 +20,5 @@ data.push({
 });
 
 fs.writeFileSync('whale-data.json', JSON.stringify(data, null, 2));
-console.log(`Přidána nová transakce. Celkem: ${data.length} záznamů`);
 
 console.log('=== Update dokončen úspěšně ===');
