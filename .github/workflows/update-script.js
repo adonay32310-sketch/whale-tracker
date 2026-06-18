@@ -6,15 +6,15 @@ let data = [];
 try {
   data = JSON.parse(fs.readFileSync('whale-data.json', 'utf8'));
 } catch (e) {
-  console.log('Soubor nenalezen nebo poškozen, vytvářím nový.');
+  console.log('Soubor nenalezen, vytvářím nový.');
   data = [];
 }
 
-// Přidáme placeholder transakci (pro testování)
+// Přidáme jednoduchý placeholder
 const newEntry = {
   "time": new Date().toLocaleDateString('cs-CZ') + " " + new Date().toLocaleTimeString('cs-CZ', {hour: '2-digit', minute: '2-digit'}),
-  "btc": Math.floor(Math.random() * 900) + 400,
-  "usd": (Math.floor(Math.random() * 60) + 25) + "M",
+  "btc": 650,
+  "usd": "41.6M",
   "price": "64200",
   "from": "Binance",
   "to": "unknown",
