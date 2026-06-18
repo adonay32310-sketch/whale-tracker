@@ -1,9 +1,9 @@
-name: Update Whale Data (Automatic)
+name: Update Whale Data
 
 on:
   schedule:
-    - cron: '0 * * * *'        # Každou hodinu
-  workflow_dispatch:           # Ruční spuštění
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm install rss-parser axios
+
       - name: Fetch and update whale data
         run: node update-script.js
 
@@ -32,7 +35,6 @@ jobs:
             git add whale-data.json
             git commit -m "chore: automatická aktualizace whale dat ($(date '+%Y-%m-%d %H:%M'))"
             git push
-            echo "Data byla aktualizována."
           else
             echo "Žádné nové změny."
           fi
