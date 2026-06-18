@@ -2,27 +2,27 @@ const fs = require('fs');
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-console.log('Spouštím aktualizaci whale dat z Whale Alert RSS...');
+console.log('Spouštím aktualizaci whale dat...');
 
 let data = [];
 try {
   data = JSON.parse(fs.readFileSync('whale-data.json', 'utf8'));
 } catch (e) {
-  console.log('Soubor nenalezen, vytvářím nový.');
+  console.log('Soubor nenalezen nebo poškozen, vytvářím nový.');
   data = [];
 }
 
-// Fetch from Whale Alert RSS
 parser.parseURL('https://whale-alert.io/feed')
   .then(feed => {
     console.log(`Našel ${feed.items.length} feed položek.`);
 
-    feed.items.slice(0, 5).forEach(item => {  // Zpracujeme prvních 5 položek
-      if (item.title && item.title.includes('BTC')) {
+    let added = 0;
+    feed.items.slice(0, 10).forEach(item => {
+      if (item.title && item.title.includes('BTC') && item.title.includes('transferred')) {
         const match = item.title.match(/(\d+)\s+BTC/);
         if (match) {
           const btc = parseInt(match[1]);
-          if (btc > 400) {  // Jen velké transakce
+          if (btc > 300) {
             const newEntry = {
               "time": new Date().toLocaleDateString('cs-CZ') + " " + new Date().toLocaleTimeString('cs-CZ', {hour: '2-digit', minute: '2-digit'}),
               "btc": btc,
@@ -30,13 +30,13 @@ parser.parseURL('https://whale-alert.io/feed')
               "price": "64200",
               "from": "unknown",
               "to": "unknown",
-              "interp": item.title.includes('to exchange') ? "Potenciální prodej" : "Potenciální nákup"
+              "interp": item.title.toLowerCase().includes('to exchange') ? "Potenciální prodej" : "Potenciální nákup"
             };
 
-            // Přidat jen pokud není duplicitní podle času
-            if (!data.some(d => d.time === newEntry.time)) {
+            // Kontrola duplicity
+            if (!data.some(d => d.time === newEntry.time && d.btc === newEntry.btc)) {
               data.push(newEntry);
-              console.log(`Přidána nová transakce: ${btc} BTC`);
+              added++;
             }
           }
         }
@@ -44,12 +44,12 @@ parser.parseURL('https://whale-alert.io/feed')
     });
 
     fs.writeFileSync('whale-data.json', JSON.stringify(data, null, 2));
-    console.log(`Celkem záznamů: ${data.length}`);
+    console.log(`Přidáno ${added} nových transakcí. Celkem: ${data.length}`);
   })
   .catch(err => {
     console.error('Chyba při stahování RSS:', err.message);
-    // Fallback - přidat placeholder
-    data.push({
+    // Fallback
+    const fallback = {
       "time": new Date().toLocaleDateString('cs-CZ') + " " + new Date().toLocaleTimeString('cs-CZ', {hour: '2-digit', minute: '2-digit'}),
       "btc": 650,
       "usd": "41.6M",
@@ -57,6 +57,8 @@ parser.parseURL('https://whale-alert.io/feed')
       "from": "Binance",
       "to": "unknown",
       "interp": "Potenciální nákup"
-    });
+    };
+    data.push(fallback);
     fs.writeFileSync('whale-data.json', JSON.stringify(data, null, 2));
+    console.log('Použit fallback záznam.');
   });
