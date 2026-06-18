@@ -15,16 +15,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'   # Novější verze (řeší deprecation)
+      - name: Add new whale transaction
+        run: |
+          echo 'Přidávám novou transakci...'
+          TIMESTAMP=$(date '+%d. %m. %Y %H:%M')
+          NEW_ENTRY="{\"time\":\"$TIMESTAMP\",\"btc\":650,\"usd\":\"41.6M\",\"price\":\"64200\",\"from\":\"Binance\",\"to\":\"unknown\",\"interp\":\"Potenciální nákup\"}"
+          
+          if [ -f whale-data.json ]; then
+            jq '. + ['"$NEW_ENTRY"']' whale-data.json > temp.json && mv temp.json whale-data.json
+          else
+            echo "[$NEW_ENTRY]" > whale-data.json
+          fi
 
-      - name: Install dependencies
-        run: npm install rss-parser axios
-
-      - name: Fetch and update whale data
-        run: node update-script.js
+          echo "Přidána nová transakce."
 
       - name: Commit and push changes
         run: |
@@ -35,6 +38,7 @@ jobs:
             git add whale-data.json
             git commit -m "chore: automatická aktualizace whale dat ($(date '+%Y-%m-%d %H:%M'))"
             git push
+            echo "Data byla aktualizována."
           else
-            echo "Žádné nové změny."
+            echo "Žádné změny."
           fi
