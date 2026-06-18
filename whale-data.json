@@ -6,6 +6,87 @@
     "price": "64300",
     "from": "Coinbase Inst.",
     "to": "unknown",
+    "interp": "PotenciÃ¡lnÃ­ nÃ¡kup"
+  },
+  {
+    "time": "16. 6. 2026 11:40",
+    "btc": 680,
+    "usd": "43.7M",
+    "price": "64250",
+    "from": "unknown",
+    "to": "Binance",
+    "interp": "PotenciÃ¡lnÃ­ prodej"
+  },
+  {
+    "time": "16. 6. 2026 14:25",
+    "btc": 1450,
+    "usd": "93.2M",
+    "price": "64280",
+    "from": "Binance",
+    "to": "unknown",
+    "interp": "PotenciÃ¡lnÃ­ nÃ¡kup"
+  },
+  {
+    "time": "16. 6. 2026 18:50",
+    "btc": 520,
+    "usd": "33.4M",
+    "price": "64350",
+    "from": "unknown",
+    "to": "Robinhood",
+    "interp": "PotenciÃ¡lnÃ­ prodej"
+  },
+  {
+    "time": "17. 6. 2026 07:30",
+    "btc": 780,
+    "usd": "50.1M",
+    "price": "64200",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "PotenciÃ¡lnÃ­ nÃ¡kup"
+  },
+  {
+    "time": "17. 6. 2026 10:10",
+    "btc": 1120,
+    "usd": "72.0M",
+    "price": "64300",
+    "from": "unknown",
+    "to": "Binance",
+    "interp": "PotenciÃ¡lnÃ­ prodej"
+  },
+  {
+    "time": "17. 6. 2026 13:45",
+    "btc": 630,
+    "usd": "40.5M",
+    "price": "64280",
+    "from": "Binance",
+    "to": "unknown",
+    "interp": "PotenciÃ¡lnÃ­ nÃ¡kup"
+  },
+  {
+    "time": "17. 6. 2026 17:20",
+    "btc": 950,
+    "usd": "61.1M",
+    "price": "64350",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
+    "interp": "PotenciÃ¡lnÃ­ nÃ¡kup"
+  },
+  {
+    "time": "17. 6. 2026 22:05",
+    "btc": 410,
+    "usd": "26.4M",
+    "price": "64400",
+    "from": "unknown",
+    "to": "Robinhood",
+    "interp": "PotenciÃ¡lnÃ­ prodej"
+  },
+  {
+    "time": "16. 6. 2026 08:15",
+    "btc": 920,
+    "usd": "59.1M",
+    "price": "64300",
+    "from": "Coinbase Inst.",
+    "to": "unknown",
     "interp": "Potenciální nákup"
   },
   {
