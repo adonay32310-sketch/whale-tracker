@@ -1,17 +1,12 @@
-name: Update Whale Data
+name: Update Whale Data (Automatic)
 
 on:
   schedule:
-    - cron: '0 * * * *'        # Automaticky každou hodinu
-  workflow_dispatch:
-    inputs:
-      json_content:
-        description: 'Vlož nový obsah whale-data.json (celý JSON)'
-        required: false
-        type: string
+    - cron: '0 * * * *'        # Každou hodinu
+  workflow_dispatch:           # Ruční spuštění
 
 jobs:
-  update-data:
+  update:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,11 +15,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update whale-data.json (if input provided)
-        if: github.event.inputs.json_content != ''
-        run: |
-          echo '${{ github.event.inputs.json_content }}' > whale-data.json
-          echo "JSON byl aktualizován z manuálního inputu."
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch and update whale data
+        run: node update-script.js
 
       - name: Commit and push changes
         run: |
@@ -33,9 +30,9 @@ jobs:
 
           if [ -n "$(git status --porcelain)" ]; then
             git add whale-data.json
-            git commit -m "chore: aktualizace whale dat ($(date '+%Y-%m-%d %H:%M'))"
+            git commit -m "chore: automatická aktualizace whale dat ($(date '+%Y-%m-%d %H:%M'))"
             git push
-            echo "Změny byly commitnuty."
+            echo "Data byla aktualizována."
           else
-            echo "Žádné změny k commitu."
+            echo "Žádné nové změny."
           fi
