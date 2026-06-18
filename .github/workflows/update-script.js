@@ -7,7 +7,7 @@ try {
   data = JSON.parse(fs.readFileSync('whale-data.json', 'utf8'));
   console.log(`Načteno ${data.length} záznamů`);
 } catch (e) {
-  console.log('Soubor nenalezen, vytvářím nový prázdný.');
+  console.log('Soubor nenalezen nebo poškozen, vytvářím nový.');
   data = [];
 }
 
@@ -26,4 +26,3 @@ fs.writeFileSync('whale-data.json', JSON.stringify(data, null, 2));
 console.log(`Přidána nová transakce. Celkem: ${data.length} záznamů`);
 
 console.log('=== Update dokončen úspěšně ===');
-process.exit(0);  // Zajistí exit code 0
