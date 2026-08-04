@@ -3238,5 +3238,14 @@
     "from": "Binance",
     "to": "unknown",
     "interp": "Potenciální nákup"
+  },
+  {
+    "time": "04. 08. 2026 15:30",
+    "btc": 650,
+    "usd": "41.6M",
+    "price": "64200",
+    "from": "Binance",
+    "to": "unknown",
+    "interp": "Potenciální nákup"
   }
 ]
